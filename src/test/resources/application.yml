@@ -1,0 +1,25 @@
+# Tests run against the same real local PostgreSQL 14.24 instance as
+# production (reachable in this build environment, unlike some sibling
+# repos; see README "Honest framing"), but with ddl-auto=create-drop so
+# every test JVM starts from a clean schema regardless of what a previous
+# manual run against the dev database left behind. Generated IDs in tests
+# are randomized (UUID-based) so concurrent or repeated runs do not collide.
+spring:
+  application:
+    name: factor-exposure-aggregation-gate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/factor_exposure
+    username: fxexp_app
+    password: ${FXEXP_DB_PASSWORD:fxexp_dev_pw}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+logging:
+  level:
+    com.manas.fxexp: WARN

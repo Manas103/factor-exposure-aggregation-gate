@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: factor-exposure-aggregation-gate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/factor_exposure
+    username: fxexp_app
+    password: ${FXEXP_DB_PASSWORD:fxexp_dev_pw}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+server:
+  port: ${SERVER_PORT:8080}
+
+logging:
+  level:
+    com.manas.fxexp: INFO

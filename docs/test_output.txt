@@ -1,0 +1,14 @@
+[INFO] Running com.manas.fxexp.service.CommentaryGateTest
+40 of 40 seeded wrong figures blocked (claim: 40)
+0 of 120 correct commentaries blocked (claim: 0)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.69 s -- in com.manas.fxexp.service.CommentaryGateTest
+[INFO] Running com.manas.fxexp.service.ExposureIncrementalVsOracleTest
+200 trade events (20 external ids, 2 strategies, random strategy reassignment) across 5 factors: incremental aggregate == from-scratch oracle, exactly, for all 15 (2 strategies + 1 fund) x 5 factor comparisons
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.767 s -- in com.manas.fxexp.service.ExposureIncrementalVsOracleTest
+[INFO] Running com.manas.fxexp.service.LimitBreachAttributionTest
+breach named factor=SPOT trade=T2-FUND-48c03d33-777d-45ef-8f58-4059b300e7ce (the largest contributor, not T3 which triggered the check or T1 which was booked first)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s -- in com.manas.fxexp.service.LimitBreachAttributionTest
+[INFO] Running com.manas.fxexp.web.TradeControllerIntegrationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.023 s -- in com.manas.fxexp.web.TradeControllerIntegrationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS

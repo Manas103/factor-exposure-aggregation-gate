@@ -1,0 +1,6 @@
+requests completed: 126444 over 10.00s (64 threads, GET /aggregates/fund/{id}, 50 seeded funds)
+throughput: 12638.1 req/s
+p50 latency: 2.587ms
+p99 latency: 18.881ms
+claim: p99 under 25ms -> MEETS
+claim: 1,500 req/s -> MEETS
